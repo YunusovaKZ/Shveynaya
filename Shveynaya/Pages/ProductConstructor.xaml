@@ -1,0 +1,85 @@
+﻿<Page x:Class="Shveynaya.Pages.ProductConstructor"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shveynaya.Pages"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="ProductConstructor" Height="490"
+      Background="{StaticResource bMain1}">
+
+    <Grid>
+        <Grid>
+            <Grid Margin="62,10,10,324" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0"  Name="ProductView"  Stretch="Uniform"/>
+                <Label Content="Изделие" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Background="{StaticResource bMain2}" Width="102" />
+
+                <Image Grid.Column="1" Name="FabricView"  Stretch="Uniform"/>
+                <Label Grid.Column="1" Content="Ткань" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Background="{StaticResource bMain2}" Width="102" />
+
+                <Image Grid.Row="1" Grid.Column="2" Name="BorderView"  Stretch="Uniform" RenderTransformOrigin="0.5, 0.5"/>
+                <Label Grid.Column="2" Content="Окантовка" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Background="{StaticResource bMain2}" Width="115"/>
+
+                <Image Grid.Row="1" Grid.Column="3" Name="FurnitureView"  Stretch="Uniform" RenderTransformOrigin="0.5, 0.5"/>
+                <Label Grid.Column="3" Content="Фурнитура" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Background="{StaticResource bMain2}" Width="131"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="0,179,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height=".1*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Изделие"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Ширина"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="Высота"/>
+
+            <ComboBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Name="Product" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" SelectionChanged="Product_SelectionChanged" />
+            <TextBox Grid.Row="2" Grid.Column="0" Name="TbWidth"/>
+            <ComboBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" Name="WidthUnit" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" Margin="20 0 10 0"/>
+            <TextBox Grid.Row="2" Grid.Column="2" Name="TbHeight"/>
+            <ComboBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="1" Name="HeightUnit" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" Margin="10 0 20 0"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="Ткань"/>
+            <ComboBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Name="Fabric" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" SelectionChanged="CbFabric_SelectionChanged"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Окантовка"/>
+            <ComboBox Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" Name="Border" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" SelectionChanged="CbBorder_SelectionChanged"/>
+            <Label Grid.Row="7" Grid.Column="0" Content="Фурнитура"/>
+            <ComboBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Name="Furniture" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0" SelectionChanged="CbFurniture_SelectionChanged"/>
+            <Label Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="1" Content="Количество"/>
+            <TextBox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" Name="TbProductAmount" Text="1"/>
+            <Grid Grid.Row="13" Grid.ColumnSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".5*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0"  Name="BtnGoBack"  Content="Назад" Click="BtnGoBack_Click" Height="45" Margin="20,-32,20,0" VerticalAlignment="Top"/>
+                <Button Grid.Row="0" Grid.Column="1"  Name="BtnOrder"  Content="Заказать" Click="BtnOrder_Click" Height="45" Margin="20,-32,20,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<Page x:Class="Shveynaya.Pages.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shveynaya.Pages"
+      xmlns:controls="clr-namespace:Shveynaya.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registration">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*"/>
+            <RowDefinition Height=".8*"/>
+        </Grid.RowDefinitions>
+        <controls:UcHeader Grid.Row="0" x:Name="HePageName" PageName="Регистрация" ExitVisible="False"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height=".2*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Content="Логин" Margin="171,0,0,0"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Пароль" Margin="163,0,0,0"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Повторите пароль" Margin="103,0,0,0"/>
+            <TextBox Grid.Column="1" Name="TbRegLogin" Height="16" Margin="34,0,188,0"/>
+            <PasswordBox Grid.Row="1" Grid.Column="1" Name="PbRegPassword" Height="16" Margin="34,0,188,0"/>
+            <PasswordBox Grid.Row="2" Grid.Column="1" Name="PbRegPasswordRepeat" Height="16" Margin="34,0,188,0"/>
+            <Button Grid.Row="3" Grid.Column="1" Height="31" Name="BtnRegister" Content="Зарегистрироваться" Click="BtnRegister_Click" Margin="34,0,188,0"/>
+            <Button Grid.Row="3" Grid.Column="0" Height="31" Name="BtnAuto" Content="Войти" Click="BtnAuto_Click" Margin="176,0,32,0"/>
+        </Grid>
+    </Grid>
+</Page>

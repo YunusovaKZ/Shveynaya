@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eff95018d4ea438eb3015820c6e82211" Name="Diagram1">
+        <EntityTypeShape EntityType="ShveynayaModel.Fabric" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.FabricStock" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.Furniture" Width="1.5" PointX="3.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.FurnitureStock" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.Order" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.OrderItem" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.OrderState" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.Product" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.Role" Width="1.5" PointX="1.5" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.ScrapRule" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.Unit" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.UnitConvert" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShveynayaModel.User" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderList_Fabric" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_ScrapRule_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_Stock_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_FabricStock_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_FabricStock_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_FurnitureStock_Furniture" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderList_Furniture" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_FurnitureStock_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_FurnitureStock_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_Order_OrderState" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderList_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderItem_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderItem_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_OrderList_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_Product_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_Product_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_UnitConvert_Unit1" ManuallyRouted="false" />
+        <AssociationConnector Association="ShveynayaModel.FK_UnitConvert_Unit2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
